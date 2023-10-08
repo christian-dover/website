@@ -1,0 +1,77 @@
+* {box-sizing: border-box}
+
+body{
+  text-align: justify;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  display: block;
+  margin: auto;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: black;
+  color: white;
+}
+
+.topnav a.active {
+  color: white;
+}
+
+.About{
+  padding: 25px;
+}
+
+.skills {
+  float: left;
+  width: 33.33%;
+  padding: 25px;
+}
+
+.skill-container {
+  padding: 25px;
+}
+
+#Linux_icon{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+#C_icon{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+#Python_icon{
+  border-radius: 55%;
+  width: 100px;
+  height: 100px;
+}
+.work_experience{
+  padding: 25px
+}
+.contact {
+  padding: 10px;
+}
+
+footer {
+  float: right;
+  padding-top: 25px;
+}

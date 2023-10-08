@@ -1,0 +1,48 @@
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: black;
+  color: white;
+}
+
+.topnav a.active {
+  color: white;
+}
+
+p a{
+  color: white;
+}
+body {
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  }
+#contact-info{
+  text-align: center;
+  padding-top: 20%;
+  }
+.Contact{
+  padding: 25pt;
+  }
+.Contact_btn{
+  padding-top: 10px;
+  padding-left: 10px;}
+  
+.contact_footer{
+  float: right;
+  padding: 20px;
+  }

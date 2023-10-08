@@ -1,0 +1,294 @@
+* {box-sizing: border-box}
+
+body{
+  text-align: justify;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  display: block;
+  margin: auto;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: black;
+  color: white;
+}
+
+.topnav a.active {
+  color: white;
+}
+
+.skills {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+}
+
+.skill-container {
+  padding: 25px;
+}
+
+
+
+p a{
+  color: white;
+}
+
+.Projects-container{
+  padding: 25pt;
+}
+pre{
+  text-align: left;
+}
+#create_admin_user {
+  width: 100%;
+  padding: 50px 0;
+  text-align: left;
+  
+  margin-top: 20px;
+  display: none;
+}
+#makeing_directory {
+  width: 100%;
+  padding: 50px 0;
+  text-align: left;
+  
+  margin-top: 20px;
+  display: none;
+}
+#sftp_connection {
+  width: 100%;
+  padding: 50px 0;
+  text-align: left;
+  
+  margin-top: 20px;
+  display: none;
+}
+
+#area_project {
+  width: 100%;
+  padding: 50px 0;
+  text-align: left;
+  margin-top: 20px;
+  display: none;
+}
+#Scholarship {
+  width: 100%;
+  padding: 50px 0;
+  text-align: left;
+  
+  margin-top: 20px;
+  display: none;
+}
+#deans_list {
+  width: 100%;
+  padding: 50px 0;
+  text-align: left;
+  
+  margin-top: 20px;
+  display: none;
+}
+#Conversion {
+  width: 100%;
+  padding: 50px 0;
+  text-align: left;
+  
+  margin-top: 20px;
+  display: none;
+}
+#calendar {
+  width: 100%;
+  padding: 50px 0;
+  text-align: left;
+  
+  margin-top: 20px;
+  display: none;
+}
+#month_day_year {
+  width: 100%;
+  padding: 50px 0;
+  text-align: left;
+  
+  margin-top: 20px;
+  display: none;
+}
+#Password {
+  width: 100%;
+  padding: 50px 0;
+  text-align: left;
+  
+  margin-top: 20px;
+  display: none;
+}
+#search {
+  width: 100%;
+  padding: 50px 0;
+  text-align: left;
+  
+  margin-top: 20px;
+  display: none;
+}
+#LVM {
+  width: 100%;
+  padding: 50px 0;
+  text-align: left;
+  
+  margin-top: 20px;
+  display: none;
+}
+#security {
+  width: 100%;
+  padding: 50px 0;
+  text-align: left;
+  
+  margin-top: 20px;
+  display: none;
+}
+#Linux_icon{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+#linux_projects {
+  width: 100%;
+  padding: 50px 0;
+  text-align: left;
+  margin-top: 20px;
+  display: none;
+}
+#C_projects {
+  width: 100%;
+  text-align: left;
+  padding-bottom: 10px;
+  display: none;
+}
+
+
+#linux_projects_center_btn{
+  text-align: center;
+}
+
+#linux_projects_btn{
+  background-color: currentColor;
+  border: none;
+}
+
+#C_projects_center_btn{
+  text-align: center;
+}
+
+#C_projects_btn{
+  background-color: currentColor;
+  border: none;
+}
+
+#Python_projects_center_btn{
+  text-align: center;
+}
+
+#Python_projects_btn{
+  background-color: currentColor;
+  border: none;
+}
+
+#Python_projects {
+  width: 100%;
+  text-align: left;
+  padding-bottom: 10px;
+  display: none;
+}
+#C_icon{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+#Python_icon{
+  border-radius: 55%;
+  width: 100px;
+  height: 100px;
+}
+.contact {
+  padding: 10px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+img{
+  width: 500px;
+  object-fit: cover;
+}
+
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+footer {
+  float: right;
+  padding-top: 25px;
+}
