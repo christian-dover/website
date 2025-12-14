@@ -1,83 +1,364 @@
 <!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="index.css">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Christian Dover – Back-End Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
 
+    body {
+      margin: 0;
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #1f2937;
+    }
+
+    .nav {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-left {
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav-links a:hover {
+      border-bottom-color: #38bdf8;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem 4rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h1, h2, h3 {
+      color: #f9fafb;
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .hero {
+      display: grid;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .hero-tagline {
+      font-size: 1.1rem;
+      color: #9ca3af;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid #374151;
+      color: #9ca3af;
+    }
+
+    .pill-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .skill-pill {
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid #4b5563;
+      font-size: 0.9rem;
+      background: #020617;
+    }
+
+    .experience-item {
+      padding: 1rem 0;
+      border-bottom: 1px solid #1f2937;
+    }
+
+    .experience-meta {
+      font-size: 0.85rem;
+      color: #9ca3af;
+      margin-bottom: 0.5rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .project-card {
+      border-radius: 0.75rem;
+      border: 1px solid #1f2937;
+      padding: 1rem;
+      background: #020617;
+    }
+
+    .project-card h3 {
+      margin-bottom: 0.35rem;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    .tag {
+      border-radius: 999px;
+      border: 1px solid #374151;
+      padding: 0.15rem 0.6rem;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-links a {
+      border-bottom: 1px dashed #38bdf8;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #6b7280;
+      padding-bottom: 2rem;
+    }
+
+    @media (min-width: 700px) {
+      .hero {
+        grid-template-columns: 2.2fr 1.4fr;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
 <body>
+  <header>
+    <nav class="nav">
+      <div class="nav-left">Christian Dover</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-  <div class="topnav">
-    <a class="active" href="index.html">About</a>
-    <a href="projects.html">Projects</a>
-  </div>
+  <main>
+    <!-- Hero / Intro -->
+    <section id="about">
+      <div class="hero">
+        <div>
+          <div class="pill">
+            <span class="pill-dot"></span>
+            Aspiring Back-End Developer
+          </div>
+          <h1>Hi, I’m Christian.</h1>
+          <p class="hero-tagline">
+            I’m learning back-end development and building a portfolio of projects
+            while bringing experience from the Air Force and customer-facing roles.
+          </p>
+        </div>
+        <div>
+          <h2>About me</h2>
+          <p>
+            I’m an aspiring back-end developer with a growing passion for how technology
+            shapes the world around us. I wrote my first lines of code in high school
+            with almost no idea what I was doing — and that curiosity is what pulled me
+            into programming.
+          </p>
+          <p>
+            Through years of learning, making mistakes, and improving, I’ve built a
+            foundation in problem-solving, persistence, and continuous learning. This
+            site is my portfolio and a work in progress. I’m always open to feedback.
+          </p>
+        </div>
+      </div>
+    </section>
 
+    <!-- Skills -->
+    <section id="skills">
+      <h2>My Skills</h2>
+      <p>Tools and technologies I’m currently working with:</p>
+      <div class="skills-list">
+        <span class="skill-pill">Linux</span>
+        <span class="skill-pill">C++</span>
+        <span class="skill-pill">Python</span>
+        <!-- Add more as you learn them -->
+      </div>
+    </section>
 
-  <div class="About">
-    <h1><i>About me</i></h1>
-    <p>
-      i am a up incoming back-end programmer. i got into programming back when i was in high school, with litttle
-       to no idea into how to make it work. that very thing is what got me into programming i wanted to learn how this works.
-       what makes our society the way it is today. with what i leanred through my mistakes and corrections through the years
-       i do hope that my portfolio matches what you are looking for, but i am always looking for feedback on this project so use 
-       the contact page or email me directly if you have any questions.
-    </p>
-  </div>
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
 
-  <div class="skill-container">
-    <h1>My Skills</h1>
-    <div class="skills">
-      <a href="projects.html#Linux"><img id="Linux_icon" src="linux_icon.png" alt="Linux icon"></a>Linux
-    </div>
+      <div class="experience-item">
+        <h3>Military (Air Force)</h3>
+        <div class="experience-meta">Sep 2020 – Present</div>
+        <p>
+          My time in the Air Force has strengthened my discipline, attention to detail,
+          and ability to learn complex systems quickly. Working in a structured,
+          high-responsibility environment has taught me how to stay calm under pressure
+          and collaborate with diverse teams.
+        </p>
+      </div>
 
-    <div class="skills">
-      <a href="projects.html#C++"><img id="C_icon" src="C++_icon.png" alt="C++ icon"></a>C++
-    </div>
+      <div class="experience-item">
+        <h3>Grubhub – Delivery Driver</h3>
+        <div class="experience-meta">Jul 2019 – Sep 2021</div>
+        <p>
+          Delivered customer orders using the Grubhub app, carefully reviewing order
+          details and double-checking items before delivery. This role taught me
+          time management, route planning, and clear communication with customers
+          and restaurants.
+        </p>
+      </div>
 
-    <div class="skills">
-      <a href="projects.html#Python"><img id="Python_icon" src="python_icon.png" alt="Python icon"></a>Python
-    </div>
-  </div>
+      <div class="experience-item">
+        <h3>DoorDash – Delivery Driver</h3>
+        <div class="experience-meta">Aug 2018 – Jul 2019</div>
+        <p>
+          Managed multiple deliveries while following customer instructions and
+          resolving issues professionally when something went wrong. Built reliability,
+          responsibility, and a strong customer-service mindset.
+        </p>
+      </div>
 
-  <div class="work_experience">
-    <div id="Military">
-      <h2><b>Military(Air Force)</b></h2>
-      <h3>Sep 2020- <span class="w3-tag w3-teal w3-round">Current</span></h3>
-        <p>Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit
-            sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
-    </div>
+      <div class="experience-item">
+        <h3>Rite Aid – Cashier</h3>
+        <div class="experience-meta">Feb 2017 – Dec 2017</div>
+        <p>
+          Assisted customers, handled transactions, and kept the front area organized.
+          This experience taught me patience, active listening, and how to interact
+          with many different people in a friendly and professional way.
+        </p>
+      </div>
+    </section>
 
-    <div id="Grubhub">
-      <h2><b>GrubHub</b></h2>
-      <h3>Jul 2019 - Sep 2021</h3>
-        <p>With Grubhub i worked as a delivery driver getting orders on the
-            grubhub app and delivering food to the customers. With time it taught me how to look at orders carefully
-            and make sure to double check everything is in order before i deliveried to the customer. </p>
-    </div>
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>Here are a few things I’m working on or plan to build soon:</p>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Project Name #1</h3>
+          <p>
+            Short description of what the project does and what you’re learning from it.
+            For example: a command-line tool written in C++ to manage todo lists.
+          </p>
+          <div class="project-tags">
+            <span class="tag">C++</span>
+            <span class="tag">CLI</span>
+          </div>
+        </div>
 
-    <div id="Doordash">
-      <h2><b>Doordash</b></h2>
-      <h3>Aug 2018 - Jul 2019</h3>
-        <p>With Doordash i worked as a delivery driver getting orders on the
-          Doordash app and delivering food to the customers. With time it taught me how to look at orders carefully
-           and make sure to double check everything is in order before i deliveried to the customer</p>
-    </div>
+        <div class="project-card">
+          <h3>Project Name #2</h3>
+          <p>
+            Another project idea or work-in-progress. You can link to your GitHub repo
+            once it’s ready.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Learning</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div id="Rite Aid">
-      <h2><b>Rite Aid</b></h2>
-      <h3>Feb 2017 - Dec 2017</h3>
-        <p>For Rite Aid i worked as a cashier for them. i talked with many different people teaching me patience
-          with customers and how to activley interract with the customer on a friendly manner. </p><br>
-    </div>
-  </div>
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        I’m always open to feedback, questions, or opportunities to learn and grow.
+        Feel free to reach out:
+      </p>
+      <div class="contact-links">
+        <!-- Replace with your real email and links -->
+        <a href="mailto:your-email@example.com">Email me</a>
+        <a href="https://github.com/christian-dover" target="_blank" rel="noreferrer">GitHub</a>
+        <!-- Add LinkedIn if you have it -->
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Christian Dover. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
-
-<footer>
-  <div class="contact">
-    <button style="font-size:24px"><a href="https://www.linkedin.com/in/christian-dover/"><i
-          class="fa fa-linkedin-square"></a></i></button>
-    <button style="font-size:24px"><a href="https://github.com/christian-dover"><i
-          class="fa fa-github-square"></i></a></i></button>
-  </div>
-</footer>
-<html>
+</html>
