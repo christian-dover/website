@@ -19,7 +19,6 @@
 
   <div class="skill-container">
     <h1>My Skills</h1>
-
     <div class="skills">
       <a href="#Linux"><img id="Linux_icon" src="linux_icon.png" alt="Linux icon"></a>Linux
     </div>
@@ -34,20 +33,20 @@
   </div>
 
   <div class="Projects-container">
-    <!-- C++ SECTION -->
+    <!-- ================= C++ SECTION ================= -->
     <div class="C">
       <h2 id="C++"><u><b>C++</b></u></h2>
       <p>
-        C++ was the first language I learned in school. It was challenging because of all the rules and syntax,
-        but it helped me get my feet wet in programming. Through C++ I started to understand how powerful code can be
-        and how it’s used in our society.
+        C++ was the first language I learned in school and the first one I was taught. It was challenging because of
+        all the rules and syntax, but it helped me get my feet wet in programming. It also showed me how powerful
+        programming can be and how it’s been used in our society.
       </p>
 
       <h3>Calendar Project</h3>
       <p>
         This project calculates future or previous days from a starting day given by the user. I learned that
-        programming doesn’t always have a simple built-in answer for everything, and sometimes you need to get more
-        creative with your logic to make the program work correctly.
+        programming doesn’t always have a simple answer for everything, and sometimes you have to get more creative
+        with your logic to make the program work correctly.
       </p>
       <div id="calendar">
         <pre>
@@ -93,8 +92,8 @@ int main()
       <div id="C_projects">
         <h3>Area Project</h3>
         <p>
-          In this project I created a program to calculate the area and perimeter of a rectangle using user input.
-          It helped me practice taking input, applying formulas, and then clearly showing the results to the user.
+          In this project I wanted to see if I could create something that calculates the area of a rectangle.
+          I learned how to get user input and use it in formulas to calculate both the area and perimeter.
         </p>
         <div id="area_project">
           <pre>
@@ -130,8 +129,8 @@ int main()
 
         <h3>Scholarship Project</h3>
         <p>
-          This project takes input such as name, GPA, and scholarship amount, and prints it back in a nicely
-          formatted way. I learned how to control decimal places, align text, and creatively format output when
+          This project uses input from the user and prints it back in a formatted way. I learned how to set
+          the user input to a certain number of decimal places and how to creatively separate values when
           spacing is limited.
         </p>
         <div id="Scholarship">
@@ -189,9 +188,9 @@ int main()
 
         <h3>Deans List</h3>
         <p>
-          This program works similarly to the scholarship project but checks whether the user made the Dean’s List
-          or not. I learned how to let the program analyze user input against a set of rules and return different
-          responses based on that input.
+          This code works similarly to the scholarship project and uses input from the user to check if the
+          person made the Dean’s List. I learned how to let the system analyze the input and compare it to a
+          target, returning different answers depending on the values.
         </p>
         <div id="deans_list">
           <pre>
@@ -209,12 +208,13 @@ int main()
     cout &lt;&lt; "1) Enter your test score, I'll tell you the grade. \n";
     cout &lt;&lt; "2) Enter your GPA to see if you made the Dean's List. \n";
     cout &lt;&lt; "3) exit \n";
-    // make sure the user is choosing a choice and not putting in random nonsense
+    // make sureteh user is choosing a choice and not putting in random nonsense
     while (!(cin &gt;&gt; choice))
     {
       cin.clear();
       cin.ignore(100, '\n');
       cout &lt;&lt; "please choose one of the options" &lt;&lt; endl;
+
     }
     // from user input give the apporiote output from choice given
     switch (choice)
@@ -266,8 +266,9 @@ int main()
 
         <h3>Conversion Project</h3>
         <p>
-          This project converts between inches and centimeters using user input. I learned that I won’t always
-          have a ready-made formula and sometimes I’ll need to build or adapt formulas to get the correct result.
+          This project takes input from the user and uses conversions between metric and imperial units to give
+          an accurate result. I learned that I won’t always have a formula ready to go; sometimes I’ll need to
+          rework or build new formulas to get the answer I need.
         </p>
         <div id="Conversion">
           <pre>
@@ -290,6 +291,7 @@ using namespace std;
 
 int main()
 {
+
   int counter = 0;
   cout &lt;&lt; "counter before loop " &lt;&lt; counter &lt;&lt; endl;
   int choice;
@@ -310,6 +312,7 @@ int main()
       cin.clear();
       cin.ignore(100, '\n');
       cout &lt;&lt; "please choose one of the options" &lt;&lt; endl;
+
     }
     switch (choice)
     {
@@ -353,9 +356,10 @@ int main()
 
         <h3>Month day year</h3>
         <p>
-          This was one of my first projects. It asks the user for their birth date and catches invalid days or months.
-          I learned that when you start combining multiple checks, you need to think about many edge cases and keep your
-          code as simple as possible so it’s easier to maintain.
+          This project was one of my first. It gets the user’s birthday and prints the date while catching
+          mistakes like invalid days or months. I learned that when you put things together, there are a lot
+          of cases to account for, which can slow down your program if you’re not careful. Simplifying logic
+          is important to keep things maintainable.
         </p>
         <div id="month_day_year">
           <pre>
@@ -380,11 +384,11 @@ int main() {
     cout &lt;&lt; "Enter the year you were born: ";
     cin &gt;&gt; year; 
     cout &lt;&lt; endl;
-    // catches anythin that does not match how 
-    //many month there are and days in a month
+  // catches anythin that does not match how 
+  //many month there are and days in a month
     if (day &lt; 1 && &gt; 30)
       throw invalidDay();
-
+    
     if (month &lt; 1 && &gt; 12)
     {
       throw invalidMonth();
@@ -424,12 +428,13 @@ int main() {
   {
     cout &lt;&lt; "invalid day " &lt;&lt; endl;
   } 
-
+  
   catch (invalidMonth)
   {
     cout &lt;&lt; "invalid month" &lt;&lt; endl;
+  
   }
-
+  
   return 0;
 }
           </pre>
@@ -437,174 +442,729 @@ int main() {
         <button id="month_day_year_btn">coding</button>
       </div>
     </div>
-    <div id="C_projects_center_btn"><button id="C_projects_btn">show more</button></div>
 
-    <!-- LINUX SECTION -->
+    <div id="C_projects_center_btn">
+      <button id="C_projects_btn">show more</button>
+    </div>
+
+    <!-- ================= LINUX SECTION ================= -->
     <div class="Linux">
       <h2 id="Linux"><u><b>Linux</b></u></h2>
       <p>
-        Linux was the second environment I learned. I gained a lot of experience with how it’s used in the business
-        world—especially for servers, storage, and automation.
+        Linux was the second environment I learned. I learned a lot about how it works in the business world,
+        from running server-side tasks to automating processes.
       </p>
 
       <h3>Large Volume Manager (LVM)</h3>
       <p>
-        When I started working with Linux, I noticed how often it’s used to manage servers and large amounts of data.
-        I decided to learn how to split and manage storage using LVM.
+        When I started working with Linux, I noticed that a lot of it is used for servers and storage, especially
+        breaking data into manageable pieces. I decided to explore that by using LVM.
       </p>
-
       <div id="LVM">
         <div class="container">
           <div class="row">
             <div class="column-66">
-              <img src="start 1.png" alt="Debian setup start">
+              <img src="start 1.png" alt="LVM start">
             </div>
             <div class="column-33">
               <p>
-                I chose Debian for this project because it’s a stable and popular choice for server-related tasks.
+                I decided to use Debian for this work since it’s a robust operating system for this kind of task.
               </p>
             </div>
           </div>
         </div>
-
         <div class="container">
           <div class="row">
             <div class="column-66">
-              <img src="middle 1.png" alt="Installing LVM2">
+              <img src="middle 1.png" alt="LVM lvm2">
             </div>
             <div class="column-33">
               <p>
-                To work with storage more flexibly, I used LVM2. It allows me to create and manipulate logical
-                volumes on top of physical storage.
+                To work with storage properly, I needed a tool to manage it. I chose <code>lvm2</code> so I could
+                create and manipulate storage for this project.
               </p>
             </div>
           </div>
         </div>
-
         <div class="container">
           <div class="row">
             <div class="column-66">
-              <img src="middle 2.png" alt="Partition type options">
+              <img src="middle 2.png" alt="LVM commands">
             </div>
             <div class="column-33">
               <p>
-                Once LVM is available, it lists different commands and options for managing partitions. Here I started
-                by changing the partition type.
+                Once you start up LVM, it gives a list of commands for working with storage. Here I chose to change
+                the partition type.
               </p>
             </div>
           </div>
         </div>
-
         <div class="container">
           <div class="row">
             <div class="column-66">
-              <img src="middle 3.png" alt="Partition type selection">
+              <img src="middle 3.png" alt="Partition questions">
             </div>
             <div class="column-33">
               <p>
-                After choosing to change the partition type, I answered a few questions about how I wanted to use it.
-                I selected the Linux LVM type with a FAT32 format for this setup.
+                After choosing to change the partition type, LVM asks a few questions about how you want to use the
+                partition. I chose the <code>xixux usr</code> option and a FAT32 data format.
               </p>
             </div>
           </div>
         </div>
-
         <div class="container">
           <div class="row">
             <div class="column-66">
-              <img src="middle 4.png" alt="Changing to Linux LVM">
+              <img src="middle 4.png" alt="Linux LVM type">
             </div>
             <div class="column-33">
               <p>
-                Once the configuration is complete, the system asks what you want to change the partition into.
-                I changed it into a Linux LVM partition.
+                Once I finished configuring how I wanted to work with the partition, it asked what I wanted to turn
+                it into. I chose to turn it into a Linux LVM partition.
               </p>
             </div>
           </div>
         </div>
-
         <div class="container">
           <div class="row">
             <div class="column-66">
-              <img src="middle 5.png" alt="Assigning storage size">
+              <img src="middle 5.png" alt="Storage size">
             </div>
             <div class="column-33">
               <p>
-                After setting up a usable LVM platform, I allocated storage. In this example, I gave the system 5GB
-                of storage to work with.
+                After creating a workable platform for LVM, I had to give the system storage to work with. I allocated
+                5 GB of storage.
               </p>
             </div>
           </div>
         </div>
-
         <div class="container">
           <div class="row">
             <div class="column-66">
-              <img src="middle 6.png" alt="Additional LVM partitions">
+              <img src="middle 6.png" alt="More partitions">
             </div>
             <div class="column-33">
               <p>
-                As I continued, I realized I needed more groups of storage, so I created a few more LVM partitions.
+                As I worked through the steps, I realized I needed more storage groups, so I made a few more LVM
+                partitions.
               </p>
             </div>
           </div>
         </div>
-
         <div class="container">
           <div class="row">
             <div class="column-66">
-              <img src="middle 7.png" alt="Creating volume group">
+              <img src="middle 7.png" alt="VG creation">
             </div>
             <div class="column-33">
               <p>
-                Since I had multiple LVM partitions, I grouped them using a volume group (VG). I named it
-                <code>LVMVolGroup</code>.
+                Since I created so many LVM partitions, I needed to put them together into a group. Using the
+                <code>vgcreate</code> command, I created a volume group called <code>LVMVolGroup</code>.
               </p>
             </div>
           </div>
         </div>
-
         <div class="container">
           <div class="row">
             <div class="column-66">
-              <img src="middle 8.png" alt="Volume group summary">
+              <img src="middle 8.png" alt="VG summary">
             </div>
             <div class="column-33">
               <p>
-                After creating the volume group, all the LVM partitions appeared under that group, making it easier to
-                manage them together.
+                After creating the volume group, all the LVMs I created were listed under that group.
               </p>
             </div>
           </div>
         </div>
-
         <div class="container">
           <div class="row">
             <div class="column-66">
-              <img src="middle 9.png" alt="Logical volume creation">
+              <img src="middle 9.png" alt="Logical volumes">
             </div>
             <div class="column-33">
               <p>
-                With the group set up, I created logical volumes for specific purposes: <code>www</code>,
-                <code>projects</code>, and <code>db</code>.
+                With everything under one tag, I created logical volumes named <code>www</code>, <code>projects</code>,
+                and <code>db</code>.
               </p>
             </div>
           </div>
         </div>
-
         <div class="container">
           <div class="row">
             <div class="column-66">
-              <img src="middle 12.png" alt="Directories for mount points">
+              <img src="middle 12.png" alt="Directories">
             </div>
             <div class="column-33">
               <p>
-                Next, I created directories with the same names (<code>www</code>, <code>projects</code>, and
-                <code>db</code>) so I could mount the logical volumes there.
+                Then I created directories named <code>www</code>, <code>projects</code>, and <code>db</code> to use as
+                mount points.
               </p>
             </div>
           </div>
         </div>
-
         <div class="container">
-          <div class=
+          <div class="row">
+            <div class="column-66">
+              <img src="ending 1.png" alt="Mounted volumes">
+            </div>
+            <div class="column-33">
+              <p>
+                Once the directories were created, I mounted the LVM volumes into the system using the
+                <code>mount</code> command and placed them in their respective directories.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button id="LVM_btn">coding</button>
+
+      <div id="linux_projects">
+        <h3>Create admin user</h3>
+
+        <p>
+          These pictures show what you need to do in order to make someone an admin user.
+        </p>
+        <div id="create_admin_user">
+          <div class="container">
+            <div class="row">
+              <div class="column-66">
+                <img src="final 1.png" alt="adduser">
+              </div>
+              <div class="column-33">
+                <p>
+                  Here I use the command <code>adduser</code> followed by a username. It asks you to create a password
+                  and fill in information such as name and phone number, then confirms the details before creating
+                  the user.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="column-66">
+                <img src="final 2.png" alt="sudo usermod">
+              </div>
+              <div class="column-33">
+                <p>
+                  Next I use <code>usermod -aG sudo 'username'</code> and then <code>su - username</code> to switch
+                  to that user. Running <code>sudo ls -la /root</code> shows what powers you have as an admin.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="create_admin_user_btn">coding</button>
+
+        <h3>Making directory and add to bash</h3>
+        <p>
+          These pictures show how to make a directory and add it so you can jump to it quickly from the shell.
+        </p>
+        <div id="makeing_directory">
+          <div class="container">
+            <div class="row">
+              <div class="column-66">
+                <img src="final 3.png" alt="mkdir example">
+              </div>
+              <div class="column-33">
+                <p>
+                  To make a directory, I use the <code>mkdir</code> command with a name. It’s added to the current
+                  directory and can be reached with <code>cd</code>. You can also add shortcuts in your shell config
+                  for faster navigation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="makeing_directory_btn">coding</button>
+
+        <h3>SFTP connection and transfer</h3>
+        <p>
+          These images show how to make an SFTP connection and transfer files over it.
+        </p>
+        <div id="sftp_connection">
+          <div class="container">
+            <div class="row">
+              <div class="column-66">
+                <img src="sftp final 2.png" alt="sftp command">
+              </div>
+              <div class="column-33">
+                <p>
+                  On the local computer, I open a command prompt or terminal and use <code>sftp</code> with my
+                  <code>username@website</code> to connect.
+                </p>
+              </div>
+
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="column-66">
+                <img src="sftp final 3.png" alt="sftp login">
+              </div>
+              <div class="column-33">
+                <p>
+                  After entering the password, I have two “sides”: my local computer and the remote site I’m connected
+                  to. If I want to run commands on my local system, I prefix them with <code>l</code>. For the remote
+                  site, I use the regular commands.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="column-66">
+                <img src="sftp final 4.png" alt="sftp transfer">
+              </div>
+              <div class="column-33">
+                <p>
+                  This screenshot shows what it looks like when uploading files. Downloading works in a very similar
+                  way, just using the opposite command.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="sftp_connection_btn">coding</button>
+      </div>
+    </div>
+
+    <div id="linux_projects_center_btn">
+      <button id="linux_projects_btn">show more</button>
+    </div>
+
+    <!-- ================= PYTHON SECTION ================= -->
+    <div class="Python">
+      <h2 id="Python"><u><b>Python</b></u></h2>
+      <p>
+        Python was the last language I learned, mainly because I wanted to see how different it was from the
+        other languages I already knew.
+      </p>
+
+      <h3>Password generator</h3>
+      <p>
+        This project randomly picks letters and numbers from a string of characters and writes the password into a
+        text document along with the date so I can view it later.
+      </p>
+      <div id="Password">
+        <pre>
+#creates a random passsword
+import random 
+import datetime
+import linecache
+
+date =  (datetime.datetime.now())
+chars = "abcdefghijklomnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789!@#$%^&*()"
+path = r'your path to file'
+
+def listtostr(text):
+    # initialize an empty string
+    str1 = "" 
+    
+    # return string  
+    return (str1.join(text)) 
+
+# this function read the file 
+def ReadTheFile(website):
+    f = open(path,'r')
+    text = f.readlines()
+    #this reads each line in the text looking the word the user put in
+    for line in text:
+        if website in line:
+            position = text.index(line)
+            specific_line = linecache.getline(path,position + 1)
+            f.close
+            ask_user(password,date,specific_line,position,text) #if found moves to the ask_user function
+            break
+    else: # if not there closes read function and moves to write funtion
+            f.close
+            a = open(path,'a')
+            a.write("\n"+ website +": " + password + "; " + date.strftime("%x"))
+#ask user if they want to overwrite the password the read function found
+def ask_user(password,date,specific_line,position,text):
+    check = str(input("would you like to overwrite it? (Y/N): ")).lower().strip()
+    try:
+        if check[0] == 'y':# if yes moves to Write funtion
+            WriteToFile(password,date,specific_line,position,text)
+        elif check[0] == 'n':
+            print("cancelled")
+        else: # if no cancels program
+            print('Invalid Input')
+            return ask_user()
+    except Exception as error:# makes sure the user picks yes or no and not just random junk
+        print("Please enter valid inputs")
+        print(error)
+#this function write in the word that the user inputed
+def WriteToFile(password,date,specific_line,position,text):
+    with open(path,"w") as w:
+        line_list = specific_line.split()#get line from read function and take apart to either replace or write to new line
+        line_list[1]= " "+  password +"; "
+        line_list[2] = date.strftime("%x")
+        str1 = listtostr(line_list)
+        text[position] = str1 +"\n"
+        for ele in text:
+            w.write(ele)
+        w.close
+while 1:# this shows up first to get user input for what the needs
+    website = input("what is the name of the website? ")
+    password_len = int(input("how long of a password do you need? "))
+    for x in range(0,1):#gives the amount of char the user ask for in prev question
+        password = ""
+        for x in range(0, password_len):
+            password_char = random.choice(chars)
+            password = password + password_char
+    break
+
+ReadTheFile(website)
+        </pre>
+      </div>
+      <button id="Password_btn">coding</button>
+
+      <div id="Python_projects">
+        <h3>Search program</h3>
+        <p>
+          This project searches drives on Windows to find files matching a name and extension. It helped me practice
+          working with the filesystem and automating search tasks.
+        </p>
+        <div id="search">
+          <pre>
+import os
+import win32api
+import fnmatch
+import re
+
+class creation:
+
+    def search_contents(drive,search_term): #searches through the drive looking for the file 
+        for dir,sub, files in os.walk(drive,topdown=True):    
+            for file in files:
+                if  fnmatch.fnmatch(file,search_term) == True:
+                    print("\tFound the file!: ", file)
+                    file_location = os.path.abspath(os.path.join(dir, file))
+                    print(file_location)
+                    break
+            else:
+                continue
+
+    def find_file_in_all_drives(search_term):
+        #get the begining file to start search
+        rex = re.compile(search_term) 
+        for drive in win32api.GetLogicalDriveStrings().split('\000')[:-1]:
+            creation.search_contents(drive,search_term)
+
+    def get_nameoffile(): #get the name and exstention of file
+        key_word = input("what are you looking for? ")
+        dot_exstention= input("what is the exstention? ")
+        search_term = key_word + "." + dot_exstention
+        creation.find_file_in_all_drives(search_term)
+        
+
+#sends to the start of the program 
+creation.get_nameoffile()
+          </pre>
+        </div>
+        <button id="search_btn">coding</button>
+
+        <h3>Security program</h3>
+        <p>
+          This project searches for a file and then lets you encrypt it, decrypt it, or add more data to an encrypted
+          file using RSA and symmetric key encryption. I learned a lot about encryption libraries and secure file
+          handling.
+        </p>
+        <div id="security">
+          <pre>
+import os
+import win32api
+import fnmatch
+import re
+import encrypt_data
+import decrypt_data
+import create_keys
+class creation:
+    def what_to_do(file_location,search_term): #sets up a menu for what they want to do with the file
+        print("[1]encrypt the file")
+        print("[2]decrypt the file")
+        print("[3]add to encrypted file")
+        
+        check = int(input("what would you like to do? "))
+        if check == 1:
+            create_keys.key_gen.create_keys(search_term)
+            encrypt_data.encryption.encrypt_file(file_location,search_term)
+        elif check == 2:
+            decrypt_data.decrypt.decrypt_file(search_term)
+        elif check == 3:
+            decrypt_data.decrypt.decrypt_file_add(search_term)
+
+    def search_contents(drive,search_term): #searches through the drive looking for the file 
+        for dir,sub, files in os.walk(drive,topdown=True):    
+            for file in files:
+                if  fnmatch.fnmatch(file,search_term) == True:
+                    print("\tFound the file!: ", file)
+                    file_location = os.path.abspath(os.path.join(dir, file))
+                    creation.what_to_do(file_location,search_term)
+                    break
+            else:
+                continue
+
+    def find_file_in_all_drives(search_term):
+        #get the begining file to start search
+        rex = re.compile(search_term) 
+        for drive in win32api.GetLogicalDriveStrings().split('\000')[:-1]:
+            creation.search_contents(drive,search_term)
+
+    def get_nameoffile(): #get the name and exstention of file
+        key_word = input("what are you looking for? ")
+        dot_exstention= input("what is the exstention? ")
+        search_term = key_word + "." + dot_exstention
+        creation.find_file_in_all_drives(search_term)
+        
+
+#sends to the start of the program 
+creation.get_nameoffile()
+
+
+import os
+import shutil
+
+pos1= os.listdir()
+pos2="D:\code projects\secret stuff"
+
+def move_stuff(search_term):
+    for file in pos1:
+        if file == search_term + 'encrypted_key':
+            new1 = os.path.abspath(file)
+            shutil.move(new1,pos2)
+            print("moved file")
+        elif file == search_term + 'priv.key':
+            new1 = os.path.abspath(file)
+            shutil.move(new1,pos2)
+            print("moved file")
+        elif file == search_term + 'encrypted_file':
+            new1 = os.path.abspath(file)
+            shutil.move(new1,pos2)
+            print("moved file")
+        elif file == search_term + 'symmetric.key':
+            new1 = os.path.abspath(file)
+            shutil.move(new1,pos2)
+            print("moved file")
+        elif file == search_term +'public.key':
+            new1 = os.path.abspath(file)
+            shutil.move(new1,pos2)
+            print("moved file")
+        elif file == search_term:
+            new1 = os.path.abspath(file)
+            shutil.move(new1,pos2)
+            print("moved file")
+        else:
+            print("not that one")                      
+
+import os
+import move_stuff
+import rsa
+from cryptography.fernet import Fernet
+
+class encryption:
+    def encrypt_file(file_location,search_term,):
+        # open the symmetric key file
+        
+        skey = open(search_term + 'symmetric.key','rb')
+        key = skey.read()
+
+        # create the cipher
+        cipher = Fernet(key)
+
+        # open file for encrypting
+        myfile = open(file_location,'rb')
+        myfiledata= myfile.read()
+
+        # encrypt the data
+        encrypted_data = cipher.encrypt(myfiledata)
+        edata = open(search_term +'encrypted_file','wb')
+        edata.write(encrypted_data)
+
+        print('encrypting')
+
+        # open the public key file
+        pkey = open(search_term +'public.key','rb')
+        pkdata = pkey.read()
+
+        # load the file
+        pubkey = rsa.PublicKey.load_pkcs1(pkdata)
+
+        # encrypt the symmetric key file with the public key
+        encrypted_key = rsa.encrypt(key,pubkey)
+
+        ekey = open(search_term +'encrypted_key','wb')
+        ekey.write(encrypted_key)
+
+
+        skey.close()
+        myfile.close()
+        edata.close()
+        ekey.close()
+
+        move_stuff.move_stuff(search_term)
+        
+    def encrypt_file_add(search_term,encrypted_data_add):
+        # open the symmetric key file
+        
+        skey = open(search_term + 'symmetric.key','rb')
+        key = skey.read()
+
+        # create the cipher
+        cipher = Fernet(key)
+
+        # open file for encrypting
+        myfile = open(search_term + 'encrypted_file','rb')
+        myfiledata= myfile.read()
+
+        # encrypt the data
+        encrypted_data = cipher.encrypt(myfiledata)
+        edata = open(search_term +'encrypted_file','wb')
+        edata.write(encrypted_data)
+
+        print('encrypting')
+
+        # open the public key file
+        pkey = open(search_term +'public.key','rb')
+        pkdata = pkey.read()
+
+        # load the file
+        pubkey = rsa.PublicKey.load_pkcs1(pkdata)
+
+        # encrypt the symmetric key file with the public key
+        encrypted_key = rsa.encrypt(key,pubkey)
+
+        ekey = open(search_term +'encrypted_key','wb')
+        ekey.write(encrypted_key)
+
+
+        skey.close()
+        myfile.close()
+        edata.close()
+        ekey.close()
+
+
+import rsa
+import os
+import PasswordGenerator
+import encrypt_data
+from cryptography.fernet import Fernet
+
+class decrypt:
+    def decrypt_file(search_term):
+        os.chdir("D:\code projects\secret stuff")
+        # load the private key to decrypt the public key
+        prkey = open(search_term + 'priv.key','rb')
+        pkey = prkey.read()
+        private_key = rsa.PrivateKey.load_pkcs1(pkey)
+
+        e = open(search_term + 'encrypted_key','rb')
+        ekey = e.read()
+
+        dpubkey = rsa.decrypt(ekey,private_key)
+
+        cipher = Fernet(dpubkey)
+
+        encrypted_data = open(search_term + 'encrypted_file','rb')
+        edata = encrypted_data.read()
+
+
+        decrypted_data = cipher.decrypt(edata)
+
+
+        decryption = open(search_term + 'decrypted_file', 'w')
+        decryption.write(decrypted_data)
+        
+        prkey.close()
+        encrypted_data.close()
+        e.close()
+
+
+    def decrypt_file_add(search_term):
+        os.chdir("D:\code projects\secret stuff")
+        # load the private key to decrypt the public key
+        prkey = open(search_term + 'priv.key','rb')
+        pkey = prkey.read()
+        private_key = rsa.PrivateKey.load_pkcs1(pkey)
+
+        e = open(search_term + 'encrypted_key','rb')
+        ekey = e.read()
+
+        dpubkey = rsa.decrypt(ekey,private_key)
+
+        cipher = Fernet(dpubkey)
+
+        encrypted_data = open(search_term + 'encrypted_file','rb')
+        edata = encrypted_data.read()
+        decrypted_data = cipher.decrypt(edata)
+        print(decrypted_data)
+        encrypted_data.close()
+
+        
+        website,password,date = PasswordGenerator.start()
+        add_data =decrypted_data + website + password+date
+        encrypted_data_add = open(search_term + 'encrypted_file','wb')
+        encrypted_data_add.write(add_data)
+
+        prkey.close()
+        encrypted_data_add.close()
+        e.close()
+
+        encrypt_data.encryption.encrypt_file_add(search_term,encrypted_data_add)
+
+
+import rsa
+from cryptography.fernet import Fernet
+class key_gen:
+    def create_keys(search_term):
+        # create the symmetric key
+        key = Fernet.generate_key()
+
+        # write the symmetric key to a file
+        k = open(search_term + 'symmetric.key','wb')
+        k.write(key)
+        k.close()
+
+        # create the pub & private keys
+        (pubkey,privkey)=rsa.newkeys(2048)
+
+        # write the public key to a file
+        pukey = open(search_term + 'public.key','wb')
+        pukey.write(pubkey.save_pkcs1('PEM'))
+        pukey.close()
+
+        # write the private key to a file
+        prkey = open(search_term + 'priv.key','wb')
+        prkey.write(privkey.save_pkcs1('PEM'))
+        prkey.close()
+          </pre>
+        </div>
+        <button id="security_btn">coding</button>
+      </div>
+    </div>
+
+    <div class="center">
+      <div id="Python_projects_center_btn">
+        <button id="Python_projects_btn">show more</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="contact">
+      <button style="font-size:24px">
+        <a href="https://www.linkedin.com/in/christian-dover/" aria-label="LinkedIn">
+          <i class="fa fa-linkedin-square"></i>
+        </a>
+      </button>
+      <button style="font-size:24px">
+        <a href="https://github.com/christian-dover" aria-label="GitHub">
+          <i class="fa fa-github-square"></i>
+        </a>
+      </button>
+    </div>
+  </footer>
+</body>
+</html>
