@@ -1,12 +1,14 @@
-﻿<!DOCTYPE html>
-<html>
-<title>Christian Portfolio</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="projects.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="projects.js" type="text/javascript"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Christian Portfolio – Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="projects.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="projects.js" type="text/javascript"></script>
+</head>
 
 <body>
 
@@ -17,6 +19,7 @@
 
   <div class="skill-container">
     <h1>My Skills</h1>
+
     <div class="skills">
       <a href="#Linux"><img id="Linux_icon" src="linux_icon.png" alt="Linux icon"></a>Linux
     </div>
@@ -29,424 +32,406 @@
       <a href="#Python"><img id="Python_icon" src="python_icon.png" alt="Python icon"></a>Python
     </div>
   </div>
+
   <div class="Projects-container">
+    <!-- C++ SECTION -->
     <div class="C">
-      <h2 id="C++"><u><b>C++</u></b></h2>
-      <p>The C++ Language i learned in school and the first language that i was taught, it was challanging to me
-        becuase of all the rules and syntax you had to learn for this language. it did help me get my feet wet
-        when it came to programming and showed me all the things you can do with programming and what it has been used
-        for in our society.
+      <h2 id="C++"><u><b>C++</b></u></h2>
+      <p>
+        C++ was the first language I learned in school. It was challenging because of all the rules and syntax,
+        but it helped me get my feet wet in programming. Through C++ I started to understand how powerful code can be
+        and how it’s used in our society.
       </p>
 
       <h3>Calendar Project</h3>
-      <p>this project coding future dates from the starting date given from the user. what i leanred from this was
-        that programming doesnt always have a simple answer to everything, and you will have get more creative with your
-        work in order
-        to make the program isself work in a logical way.
+      <p>
+        This project calculates future or previous days from a starting day given by the user. I learned that
+        programming doesn’t always have a simple built-in answer for everything, and sometimes you need to get more
+        creative with your logic to make the program work correctly.
       </p>
       <div id="calendar">
         <pre>
-                    #pragma once
-                    #include <iostream>
-                      using namespace std;
-                      // calucates either the prev day or next day depending on user input
-                      int calcprevday(int x)
-                      {
-                      return x - 1;
-                      }
-                      int calcnexday (int y)
-                      {
-                      return y + 1;
-                      }
+#pragma once
+#include &lt;iostream&gt;
+using namespace std;
+// calucates either the prev day or next day depending on user input
+int calcprevday(int x)
+{
+  return x - 1;
+}
+int calcnexday (int y)
+{
+  return y + 1;
+}
 
-                      #include "daytype.h"
-                      #include <iostream>
-                      #include <string>
-                      using namespace std;
-                      // get information from the user asking what day of the week it is
-                      int main()
-                      {
-                        int prevday;
-                        int nextday;
-                        int calcprevday;
-                        int calcnextday;
-                        int currentday;
-                        int futureday;
-                        string daysofweek[7] = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
-                        cout << "what day of the week is it? 0 being Sunday, and 6 being Saturday\n";
-                        cin >> currentday;
-                        prevday = calcprevday(currentday);
-                        nextday = calcnextday(currentday);
-                        cout << prevday << daysofweek[currentday]<< nextday << endl;
-                        
+#include "daytype.h"
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+// get information from the user asking what day of the week it is
+int main()
+{
+  int prevday;
+  int nextday;
+  int calcprevday;
+  int calcnextday;
+  int currentday;
+  int futureday;
+  string daysofweek[7] = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+  cout &lt;&lt; "what day of the week is it? 0 being Sunday, and 6 being Saturday\n";
+  cin &gt;&gt; currentday;
+  prevday = calcprevday(currentday);
+  nextday = calcnextday(currentday);
+  cout &lt;&lt; prevday &lt;&lt; daysofweek[currentday]&lt;&lt; nextday &lt;&lt; endl;
 
-
-                        return 0;
-                      }
-                    </pre>
+  return 0;
+}
+        </pre>
       </div>
       <button id="calendar_btn">coding</button>
 
       <div id="C_projects">
         <h3>Area Project</h3>
-        <p>for this project i wanted to see if i could create something that could calculate an area for a rectangle.
-          what this project showed me is how to get user input, and use the input in the formula that calculates the
-          area
-          for the rectangle and the perimter for it.
+        <p>
+          In this project I created a program to calculate the area and perimeter of a rectangle using user input.
+          It helped me practice taking input, applying formulas, and then clearly showing the results to the user.
         </p>
         <div id="area_project">
           <pre>
-                  #include <iostream>
-                    using namespace std;
-                    // get the length, and width from user
-                    int main() 
-                    {
-                      double length, width, area, perimeter;
-              
-                      cout << "please input a length
-                      for a retangle" << endl;
-                      cin >> length;
-                    
-                      cout << "now please input a 
-                      width for the rectangle" << endl;
-                      cin >> width;
-                    // multiplies the length and width together to get area
-                      perimeter = (length + width) * 2;
-                      area = length * width;
-                    // coding the  area of the rectangle along with the perimeter
-                      cout << "your area for the
-                      rectangle is: " << area << endl;
+#include &lt;iostream&gt;
+using namespace std;
+// get the length, and width from user
+int main() 
+{
+  double length, width, area, perimeter;
 
-                      cout << "you perimeter
-                      for the rectangle is: " << perimeter<< endl;
-                    
-                      return 0;
-                    }
-                    </pre>
+  cout &lt;&lt; "please input a length
+  for a retangle" &lt;&lt; endl;
+  cin &gt;&gt; length;
+
+  cout &lt;&lt; "now please input a 
+  width for the rectangle" &lt;&lt; endl;
+  cin &gt;&gt; width;
+  // multiplies the length and width together to get area
+  perimeter = (length + width) * 2;
+  area = length * width;
+  // coding the  area of the rectangle along with the perimeter
+  cout &lt;&lt; "your area for the
+  rectangle is: " &lt;&lt; area &lt;&lt; endl;
+
+  cout &lt;&lt; "you perimeter
+  for the rectangle is: " &lt;&lt; perimeter&lt;&lt; endl;
+
+  return 0;
+}
+          </pre>
         </div>
         <button id="area_project_btn">coding</button>
 
-
         <h3>Scholarship Project</h3>
-        <p>for this project uses the input from the user and project it back to the user. what i leanre form
-          this was to be able to set the use input to a certain decimal point. along with finding a creative way to
-          seperate
-          answeres if spacing was not allowed.
+        <p>
+          This project takes input such as name, GPA, and scholarship amount, and prints it back in a nicely
+          formatted way. I learned how to control decimal places, align text, and creatively format output when
+          spacing is limited.
         </p>
         <div id="Scholarship">
           <pre>
-                      #include <iostream>                                     
-                      #include <string>                                       
-                      #include <iomanip>                                      
-                      
-                      using namespace std;
-                      
-                      int main()
-                      {
-                        string name;
-                        double gpa;
-                        int scholarship;
-                      // get input from the user (name,gpa,and scholarship)
-                        cout << "what is you name?" << endl;
-                        cin >> name;
-                        cout << "what is your gpa?" << endl;
-                        cin >> gpa;
-                        cout << "how much is your scholarship?" << endl;
-                        cin >> scholarship;
-                      
-                        cout << fixed << showpoint << setprecision(2);
-                      
-                        cout << left;
-                      
-                        cout << setw(10) << name << setw(7) << gpa
-                          << setw(8) << scholarship << endl;
-                      
-                        // set in *,#,@,and ^ to get user attention and shows user inputs from last questions
-                        cout << setfill('*');
-                        cout << setw(10) << name << setw(7) << gpa
-                          << setw(8) << scholarship << endl;
-                      
-                        cout << setw(10) << name << setfill('#')
-                          << setw(7) << gpa
-                          << setw(8) << scholarship << endl;
-                      
-                        cout << setw(10) << setfill('@') << name
-                          << setw(7) << setfill('#') << gpa
-                          << setw(8) << setfill('^') << scholarship
-                          << endl;
-                      
-                        cout << right;
-                        cout << setfill(' ');
-                        cout << setw(10) << name << setw(7) << gpa
-                          << setw(8) << scholarship << endl;
-                      
-                        return 0;
-                      }
-                  </pre>
+#include &lt;iostream&gt;                                     
+#include &lt;string&gt;                                       
+#include &lt;iomanip&gt;                                      
+
+using namespace std;
+
+int main()
+{
+  string name;
+  double gpa;
+  int scholarship;
+  // get input from the user (name,gpa,and scholarship)
+  cout &lt;&lt; "what is you name?" &lt;&lt; endl;
+  cin &gt;&gt; name;
+  cout &lt;&lt; "what is your gpa?" &lt;&lt; endl;
+  cin &gt;&gt; gpa;
+  cout &lt;&lt; "how much is your scholarship?" &lt;&lt; endl;
+  cin &gt;&gt; scholarship;
+
+  cout &lt;&lt; fixed &lt;&lt; showpoint &lt;&lt; setprecision(2);
+
+  cout &lt;&lt; left;
+
+  cout &lt;&lt; setw(10) &lt;&lt; name &lt;&lt; setw(7) &lt;&lt; gpa
+    &lt;&lt; setw(8) &lt;&lt; scholarship &lt;&lt; endl;
+
+  // set in *,#,@,and ^ to get user attention and shows user inputs from last questions
+  cout &lt;&lt; setfill('*');
+  cout &lt;&lt; setw(10) &lt;&lt; name &lt;&lt; setw(7) &lt;&lt; gpa
+    &lt;&lt; setw(8) &lt;&lt; scholarship &lt;&lt; endl;
+
+  cout &lt;&lt; setw(10) &lt;&lt; name &lt;&lt; setfill('#')
+    &lt;&lt; setw(7) &lt;&lt; gpa
+    &lt;&lt; setw(8) &lt;&lt; scholarship &lt;&lt; endl;
+
+  cout &lt;&lt; setw(10) &lt;&lt; setfill('@') &lt;&lt; name
+    &lt;&lt; setw(7) &lt;&lt; setfill('#') &lt;&lt; gpa
+    &lt;&lt; setw(8) &lt;&lt; setfill('^') &lt;&lt; scholarship
+    &lt;&lt; endl;
+
+  cout &lt;&lt; right;
+  cout &lt;&lt; setfill(' ');
+  cout &lt;&lt; setw(10) &lt;&lt; name &lt;&lt; setw(7) &lt;&lt; gpa
+    &lt;&lt; setw(8) &lt;&lt; scholarship &lt;&lt; endl;
+
+  return 0;
+}
+          </pre>
         </div>
         <button id="Scholarship_btn">coding</button>
 
         <h3>Deans List</h3>
-        <p>this coding works simlary to the scholarship project and uses input from
-          the user and check to see if the person has made the deans list. what i learned from this was eing able to
-          let the system itself analyze the the input and referenece it to a set goal. letting it get a diffeent answer
-          depending on the input it was given.</p>
-        <div id="deans_list">#include <iostream>
-            <pre>
-                  #include <iostream>
-                    using namespace std;
-                    // gets user input from the menu that the user is shown
-                    int main()
-                    {
-                      int choice;
-                      int score;
-                      double GPA;
-                      do {
-                        cout << endl;
-                        cout << "please enter a option\n";
-                        cout << "1) Enter your test score, I'll tell you the grade. \n";
-                        cout << "2) Enter your GPA to see if you made the Dean's List. \n";
-                        cout << "3) exit \n";
-                        // make sureteh user is choosing a choice and not putting in random nonsense
-                        while (!(cin >> choice))
-                        {
-                          cin.clear();
-                          cin.ignore(100, '\n');
-                          cout << "please choose one of the options" << endl;
-                    
-                        }
-                        // from user input give the apporiote output from choice given
-                        switch (choice)
-                        {
-                        case 1:
-                          cout << "Enter you test score: \n"; 
-                          while (!(cin >> score))// make sure that puts in number and not just nonsenese
-                          {
-                            cin.clear();
-                            cin.ignore(100, '\n');
-                            cout << "please list you actual test score in numbers 0 - 100" << endl;
-                          }
-                          if (score >= 90 && score <= 100)
-                            cout << "you have an A\n";
-                          if (score >= 80 && score <= 89)
-                            cout << "you have got a B\n";
-                          if (score >= 70 && score <= 79)
-                            cout << "you got a C \n";
-                          if (score >= 60 && score <= 69)
-                            cout << "you got a D \n";
-                          if (score <= 59)
-                            cout << "you got a F\n";
-                          break;
-                        case 2:
-                          cout << "did you make the deans list? Enter you GPA: \n";
-                          while (!(cin >> GPA || GPA > 0 && GPA <= 4.0))
-                          {
-                            cin.clear();
-                            cin.ignore(100, '\n');
-                            cout << "make sure this is a number not a letter" << endl;
-                          }
-                          if (GPA >= 3.9 && GPA <= 4.0)
-                            cout << "you have made the deans list congratulations!\n";
-                          else
-                            cout << "i'm sorry but you need a 3.9 GPA or better\n";
-                          break;
-                        case 3:
-                          break;
-                        // shows this option if no choice made on menu is correct
-                        default:
-                          cout << "invalid input choose one of the three options\n";
-                        }
-                      } while (choice != 3);
-                      return 0;
-                    }
-                </pre>
+        <p>
+          This program works similarly to the scholarship project but checks whether the user made the Dean’s List
+          or not. I learned how to let the program analyze user input against a set of rules and return different
+          responses based on that input.
+        </p>
+        <div id="deans_list">
+          <pre>
+#include &lt;iostream&gt;
+using namespace std;
+// gets user input from the menu that the user is shown
+int main()
+{
+  int choice;
+  int score;
+  double GPA;
+  do {
+    cout &lt;&lt; endl;
+    cout &lt;&lt; "please enter a option\n";
+    cout &lt;&lt; "1) Enter your test score, I'll tell you the grade. \n";
+    cout &lt;&lt; "2) Enter your GPA to see if you made the Dean's List. \n";
+    cout &lt;&lt; "3) exit \n";
+    // make sure the user is choosing a choice and not putting in random nonsense
+    while (!(cin &gt;&gt; choice))
+    {
+      cin.clear();
+      cin.ignore(100, '\n');
+      cout &lt;&lt; "please choose one of the options" &lt;&lt; endl;
+    }
+    // from user input give the apporiote output from choice given
+    switch (choice)
+    {
+    case 1:
+      cout &lt;&lt; "Enter you test score: \n"; 
+      while (!(cin &gt;&gt; score))// make sure that puts in number and not just nonsenese
+      {
+        cin.clear();
+        cin.ignore(100, '\n');
+        cout &lt;&lt; "please list you actual test score in numbers 0 - 100" &lt;&lt; endl;
+      }
+      if (score &gt;= 90 && score &lt;= 100)
+        cout &lt;&lt; "you have an A\n";
+      if (score &gt;= 80 && score &lt;= 89)
+        cout &lt;&lt; "you have got a B\n";
+      if (score &gt;= 70 && score &lt;= 79)
+        cout &lt;&lt; "you got a C \n";
+      if (score &gt;= 60 && score &lt;= 69)
+        cout &lt;&lt; "you got a D \n";
+      if (score &lt;= 59)
+        cout &lt;&lt; "you got a F\n";
+      break;
+    case 2:
+      cout &lt;&lt; "did you make the deans list? Enter you GPA: \n";
+      while (!(cin &gt;&gt; GPA || GPA &gt; 0 && GPA &lt;= 4.0))
+      {
+        cin.clear();
+        cin.ignore(100, '\n');
+        cout &lt;&lt; "make sure this is a number not a letter" &lt;&lt; endl;
+      }
+      if (GPA &gt;= 3.9 && GPA &lt;= 4.0)
+        cout &lt;&lt; "you have made the deans list congratulations!\n";
+      else
+        cout &lt;&lt; "i'm sorry but you need a 3.9 GPA or better\n";
+      break;
+    case 3:
+      break;
+    // shows this option if no choice made on menu is correct
+    default:
+      cout &lt;&lt; "invalid input choose one of the three options\n";
+    }
+  } while (choice != 3);
+  return 0;
+}
+          </pre>
         </div>
         <button id="deans_list_btn">coding</button>
 
-
         <h3>Conversion Project</h3>
-        <p>what this project does is that it takes input from the user and uses the conversion
-          between metrics to give a you a accurate conversion between what you curently have.what i leanred from this
-          project is that i am not always going to have a formula on hand to work with and give a correct answer. what i
-          will
-          have to do is rework some old formula or create new ones in order to get the answer that i seek. </p>
+        <p>
+          This project converts between inches and centimeters using user input. I learned that I won’t always
+          have a ready-made formula and sometimes I’ll need to build or adapt formulas to get the correct result.
+        </p>
         <div id="Conversion">
           <pre>
-                  #pragma once
-                  #include <iostream>
-                    using namespace std;
-                    // depending on chice on menu uses on of funtion to covert to apportiate number
-                    int ConversiontoCentimeters(int x)
-                    {
+#pragma once
+#include &lt;iostream&gt;
+using namespace std;
+// depending on chice on menu uses on of funtion to covert to apportiate number
+int ConversiontoCentimeters(int x)
+{
+  return x * 2.54;
+}
+int ConversiontoInches(int y)
+{
+  return y / 2.54 ;
+}
+#include &lt;iostream&gt;
+#include "Header1.h"
 
-                    return x * 2.54;
-                    }
-                    int ConversiontoInches(int y)
-                    {
+using namespace std;
 
+int main()
+{
+  int counter = 0;
+  cout &lt;&lt; "counter before loop " &lt;&lt; counter &lt;&lt; endl;
+  int choice;
+  int  inches;
+  int centimeters;
+  int metric;
+  int american;
+  // give menu options for what the user want to do
+  do {
+    cout &lt;&lt; endl;
+    cout &lt;&lt; "please enter a option\n";
+    cout &lt;&lt; "1) convert inches to centimeters \n";
+    cout &lt;&lt; "2) convert centimeters to inches \n";
+    cout &lt;&lt; "3) exit \n";
 
-                    return y / 2.54 ;
-                    }
-                    #include <iostream>
-                      #include "Header1.h"
-                      
-                      using namespace std;
-                      
-                      int main()
-                      {
-                      
-                        int counter = 0;
-                        cout << "counter before loop " << counter << endl;
-                        int choice;
-                        int  inches;
-                        int centimeters;
-                        int metric;
-                        int american;
-                        // give menu options for what the user want to do
-                        do {
-                          cout << endl;
-                          cout << "please enter a option\n";
-                          cout << "1) convert inches to centimeters \n";
-                          cout << "2) convert centimeters to inches \n";
-                          cout << "3) exit \n";
-                      
-                          while (!(cin >> choice))
-                          {
-                            cin.clear();
-                            cin.ignore(100, '\n');
-                            cout << "please choose one of the options" << endl;
-                      
-                          }
-                          switch (choice)
-                          {
-                          case 1:
-                            cout << "Enter your inches length: \n";
-                            while (!(cin >> inches))
-                            {
-                              cin.clear();
-                              cin.ignore(100, '\n');
-                              cout << "please make sure you are doing inches.\n" << endl;
-                            }
-                            metric = ConversiontoCentimeters(inches);
-                      
-                      
-                      
-                            cout << "the length in centimeters is " << metric << endl;
-                            break;
-                          case 2:
-                            cout << "Enter your centimeter length: \n";
-                            while (!(cin >> centimeters))// captures anything that doesnt match in centimeters
-                            {
-                              cin.clear();
-                              cin.ignore(100, '\n');
-                              cout << "please make sure you are doing centimeters.\n" << endl;
-                            }
-                            american = ConversiontoInches(centimeters);
-                      
-                      
-                            cout << "the length in inches is " << american << endl;
-                      
-                            break;
-                          case 3:
-                      
-                            break;// shows this option if no choice made on menu is correct
-                          default:
-                            cout << "invalid input choose one of the three options\n";
-                          }
-                        } while (choice != 3);
-                        return 0;
-                      }                  
-                              </pre>
+    while (!(cin &gt;&gt; choice))
+    {
+      cin.clear();
+      cin.ignore(100, '\n');
+      cout &lt;&lt; "please choose one of the options" &lt;&lt; endl;
+    }
+    switch (choice)
+    {
+    case 1:
+      cout &lt;&lt; "Enter your inches length: \n";
+      while (!(cin &gt;&gt; inches))
+      {
+        cin.clear();
+        cin.ignore(100, '\n');
+        cout &lt;&lt; "please make sure you are doing inches.\n" &lt;&lt; endl;
+      }
+      metric = ConversiontoCentimeters(inches);
+
+      cout &lt;&lt; "the length in centimeters is " &lt;&lt; metric &lt;&lt; endl;
+      break;
+    case 2:
+      cout &lt;&lt; "Enter your centimeter length: \n";
+      while (!(cin &gt;&gt; centimeters))// captures anything that doesnt match in centimeters
+      {
+        cin.clear();
+        cin.ignore(100, '\n');
+        cout &lt;&lt; "please make sure you are doing centimeters.\n" &lt;&lt; endl;
+      }
+      american = ConversiontoInches(centimeters);
+
+      cout &lt;&lt; "the length in inches is " &lt;&lt; american &lt;&lt; endl;
+
+      break;
+    case 3:
+
+      break;// shows this option if no choice made on menu is correct
+    default:
+      cout &lt;&lt; "invalid input choose one of the three options\n";
+    }
+  } while (choice != 3);
+  return 0;
+}
+          </pre>
         </div>
         <button id="conversion_btn">coding</button>
 
-
-
-
         <h3>Month day year</h3>
-        <p>this project was one of my first project i did which was just getting the birthday
-          from the user and coding them the date they were born while also catching any
-          mishaps they made such as wrong day or month. what i learned in this project is that
-          putting things toogether there are going to be a lot of things to account for which
-          can slow down you program.in which you will have simplify your program down in order to
-          make the work in a bettter state.</p>
-        <div id="month_day_year"></code>
+        <p>
+          This was one of my first projects. It asks the user for their birth date and catches invalid days or months.
+          I learned that when you start combining multiple checks, you need to think about many edge cases and keep your
+          code as simple as possible so it’s easier to maintain.
+        </p>
+        <div id="month_day_year">
           <pre>
-            
-            #include <iostream>
-              using namespace std;
-              // get information from the user asking about the day they were born
-              class invalidDay {};
-              class invalidMonth {};
-              int main() {
-                int month, day, year;
-              
-                  try
-                  {
-                  cout << "Enter your month your were born:  ";
-                  cin >> month;
-                  cout << endl; 
-              
-                  cout << "Enter the day you were born: ";
-                  cin >> day;
-                  cout << endl;
-              
-                  cout << "Enter the year you were born: ";
-                  cin >> year; 
-                  cout << endl;
-                // catches anythin that does not match how 
-                //many month there are and days in a month
-                  if (day < 1 && > 30)
-                    throw invalidDay();
-                  
-                  if (month < 1 && > 12)
-                  {
-                    throw invalidMonth();
-                  }
-                  else
-                  {
-                    if month == 1:
-                    return "January"
-                      elif month == 2 :
-                      return "February"
-                      elif month == 3 :
-                      return "March"
-                      elif month == 4 :
-                      return "April"
-                      elif month == 5 :
-                      return "May"
-                      elif month == 6 :
-                      return "June"
-                      elif month == 7 :
-                      return "July"
-                      elif month == 8 :
-                      return "August"
-                      elif month == 9 :
-                      return "September"
-                      elif month == 10 :
-                      return "October"
-                      elif month == 11 :
-                      return "November"
-                      elif month == 12 :
-                      return "December"
-                  }
-              cout << month << day << year;
-              }
-              // shows invalid day when it does not match 
-              //previous if statement for month and day
-              catch (invalidDay)
-              {
-                cout << "invalid day " << endl;
-              } 
-              
-              catch (invalidMonth)
-              {
-                cout << "invalid month" << endl;
-              
-              }
-              
-              return 0;
-              }
+#include &lt;iostream&gt;
+using namespace std;
+// get information from the user asking about the day they were born
+class invalidDay {};
+class invalidMonth {};
+int main() {
+  int month, day, year;
+
+  try
+  {
+    cout &lt;&lt; "Enter your month your were born:  ";
+    cin &gt;&gt; month;
+    cout &lt;&lt; endl; 
+
+    cout &lt;&lt; "Enter the day you were born: ";
+    cin &gt;&gt; day;
+    cout &lt;&lt; endl;
+
+    cout &lt;&lt; "Enter the year you were born: ";
+    cin &gt;&gt; year; 
+    cout &lt;&lt; endl;
+    // catches anythin that does not match how 
+    //many month there are and days in a month
+    if (day &lt; 1 && &gt; 30)
+      throw invalidDay();
+
+    if (month &lt; 1 && &gt; 12)
+    {
+      throw invalidMonth();
+    }
+    else
+    {
+      if month == 1:
+      return "January"
+        elif month == 2 :
+        return "February"
+        elif month == 3 :
+        return "March"
+        elif month == 4 :
+        return "April"
+        elif month == 5 :
+        return "May"
+        elif month == 6 :
+        return "June"
+        elif month == 7 :
+        return "July"
+        elif month == 8 :
+        return "August"
+        elif month == 9 :
+        return "September"
+        elif month == 10 :
+        return "October"
+        elif month == 11 :
+        return "November"
+        elif month == 12 :
+        return "December"
+    }
+    cout &lt;&lt; month &lt;&lt; day &lt;&lt; year;
+  }
+  // shows invalid day when it does not match 
+  //previous if statement for month and day
+  catch (invalidDay)
+  {
+    cout &lt;&lt; "invalid day " &lt;&lt; endl;
+  } 
+
+  catch (invalidMonth)
+  {
+    cout &lt;&lt; "invalid month" &lt;&lt; endl;
+  }
+
+  return 0;
+}
           </pre>
         </div>
         <button id="month_day_year_btn">coding</button>
@@ -454,695 +439,172 @@
     </div>
     <div id="C_projects_center_btn"><button id="C_projects_btn">show more</button></div>
 
-
+    <!-- LINUX SECTION -->
     <div class="Linux">
-      <h2><u><b>Linux</u></b></h2>
-      <p>Linux was the second language i learned. i learned a lot about this language and how it
-        works in the businiess world. from running the server side of things to actaully automating some processes. </p>
-
-      <h3>large volume manager(lvm)</h3>
-      <p>when i started working with linux i noticed that most of linux is used for servers and how they deal with all
-        the data and break them up acordingly. i decided to look into trying to do just that.
+      <h2 id="Linux"><u><b>Linux</b></u></h2>
+      <p>
+        Linux was the second environment I learned. I gained a lot of experience with how it’s used in the business
+        world—especially for servers, storage, and automation.
       </p>
+
+      <h3>Large Volume Manager (LVM)</h3>
+      <p>
+        When I started working with Linux, I noticed how often it’s used to manage servers and large amounts of data.
+        I decided to learn how to split and manage storage using LVM.
+      </p>
+
       <div id="LVM">
         <div class="container">
           <div class="row">
             <div class="column-66">
-              <img src="start 1.png">
+              <img src="start 1.png" alt="Debian setup start">
             </div>
             <div class="column-33">
-              <p> i decided to use debian for this line of work since this operating system is the most robust in this
-                kind of task.</p>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="column-66">
-              <img src="middle 1.png">
-            </div>
-            <div class="column-33">
-              <p>in order for me to actually do this kind of project i would need something to help me work with the
-                storage. i decided to
-                use lvm2 for this project that took in order for me to create and minipulate the storage. </p>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="column-66">
-              <img src="middle 2.png">
-            </div>
-            <div class="column-33">
-              <p> once you start up the lvm it will give you a list of different commands on what to with the storage. i
-                chose to
-                change the partition type.
+              <p>
+                I chose Debian for this project because it’s a stable and popular choice for server-related tasks.
               </p>
             </div>
           </div>
         </div>
+
         <div class="container">
           <div class="row">
             <div class="column-66">
-              <img src="middle 3.png">
+              <img src="middle 1.png" alt="Installing LVM2">
             </div>
             <div class="column-33">
-              <p>after chosing to change the partion type. it will ask you a couple questions on what how you want to
-                work with the partition.
-                i chose the xixux usr option and putting the data type in fat 32 format. </p>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="column-66">
-              <img src="middle 4.png">
-            </div>
-            <div class="column-33">
-              <p> once you have finished on how you want to work with the parition it will ask you what do you want to
-                change it into.
-                i chose to turn it into a linux lvm. </p>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="column-66">
-              <img src="middle 5.png">
-            </div>
-            <div class="column-33">
-              <p> after you have finished changing everything into a workable platform for creating a lvm. you now then
-                have to give the system
-                storage to work with. i only gave the system 5 GB of storage to work with. </p>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="column-66">
-              <img src="middle 6.png">
-            </div>
-            <div class="column-33">
-              <p> after working with this up to this step i noticed that i would need more group of storage. i made a
-                few more lvm's partitions.</p>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="column-66">
-              <img src="middle 7.png">
-            </div>
-            <div class="column-33">
-              <p> since i have made so many paritons of lvm's i needed to put them together into a group. using the
-                command VG i was able to put the
-                muitple lvm's into a volume group called LVMVolGroup. </p>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="column-66">
-              <img src="middle 8.png">
-            </div>
-            <div class="column-33">
-              <p> after creating the LVMVolgroup all the lvm's that have created fall under the VM tag.</p>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="column-66">
-              <img src="middle 9.png">
-            </div>
-            <div class="column-33">
-              <p> now that i have everything under one tag. we need to give something to
-                those storage partitions. i created some logic volumes
-                each name respectivly www,projects, and db.
+              <p>
+                To work with storage more flexibly, I used LVM2. It allows me to create and manipulate logical
+                volumes on top of physical storage.
               </p>
             </div>
           </div>
         </div>
+
         <div class="container">
           <div class="row">
             <div class="column-66">
-              <img src="middle 12.png">
+              <img src="middle 2.png" alt="Partition type options">
             </div>
             <div class="column-33">
-              <p> after creating the we need to have place to put these so i made a directory for
-                these all respectivly name
-                www,projects, and db.
+              <p>
+                Once LVM is available, it lists different commands and options for managing partitions. Here I started
+                by changing the partition type.
               </p>
             </div>
           </div>
         </div>
+
         <div class="container">
           <div class="row">
             <div class="column-66">
-              <img src="ending 1.png">
+              <img src="middle 3.png" alt="Partition type selection">
             </div>
             <div class="column-33">
-              <p> once the directory have been created we can finally put the LVM into our system using the mount mothed
-                and puting them
-                into there respective places
+              <p>
+                After choosing to change the partition type, I answered a few questions about how I wanted to use it.
+                I selected the Linux LVM type with a FAT32 format for this setup.
               </p>
             </div>
           </div>
         </div>
-      </div>
-      <button id="LVM_btn">coding</button>
 
-      <div id="linux_projects">
-        <h3>create admin user</h3>
-
-        <p>In these pictures it shows what you need to do in order make someone a admin user.</p>
-        <div id="create_admin_user">
-          <div class="container">
-            <div class="row">
-              <div class="column-66">
-                <img src="final 1.png ">
-              </div>
-              <div class="column-33">
-                <p> As you see in this picture you use the command "adduser" and the name the user which in turn
-                  will ask you to create a passsword and the other information you would ilke to add to the
-                  user such as name, number, etc. it will then confirm with about the info you put in to cerfity the
-                  act.</p>
-              </div>
-
+        <div class="container">
+          <div class="row">
+            <div class="column-66">
+              <img src="middle 4.png" alt="Changing to Linux LVM">
             </div>
-          </div>
-
-          <div class="container">
-            <div class="row">
-              <div class="column-66">
-                <img src="final 2.png">
-              </div>
-              <div class="column-33">
-                <p> in this picture use the command "usermod -aG sudo 'username' " after that
-                  use the command "su - username" to upgrade the user to a admin. afterward use
-                  the command "sudo ls -la /root" to get a n idea of what powers you
-                  have as an admin </p>
-              </div>
+            <div class="column-33">
+              <p>
+                Once the configuration is complete, the system asks what you want to change the partition into.
+                I changed it into a Linux LVM partition.
+              </p>
             </div>
           </div>
         </div>
-        <button id="create_admin_user_btn">coding</button>
 
-        <h3>making directory and add to bash</h3>
-        <p>In these pictures it shows on how to make a directory and adding to bash so you can skip right to it.</p>
-        <div id="makeing_directory">
-          <div class="container">
-            <div class="row">
-              <div class="column-66">
-                <img src="final 3.png">
-              </div>
-              <div class="column-33">
-                <p> in order to make a direectory you use the command "mkdir" and then name it what ever you want.
-                  afterwords it will automatically add it to the directory that you are currently in and will be to
-                  jump it when you use it in the "cd" command</p>
-              </div>
+        <div class="container">
+          <div class="row">
+            <div class="column-66">
+              <img src="middle 5.png" alt="Assigning storage size">
+            </div>
+            <div class="column-33">
+              <p>
+                After setting up a usable LVM platform, I allocated storage. In this example, I gave the system 5GB
+                of storage to work with.
+              </p>
             </div>
           </div>
         </div>
-        <button id="makeing_directory_btn">coding</button>
 
-        <h3>Sftp connection and transfer</h3>
-        <p>from the images you saw this coding how to do a sftp connection and tranfer files over it</p>
-        <div id="sftp_connection">
-          <div class="container">
-            <div class="row">
-              <div class="column-66">
-                <img src="sftp final 2.png">
-              </div>
-              <div class="column-33">
-                <p> on the computer your make ure you are on the command propmpt or equavilent on your computer. use the
-                  command
-                  "sftp" with your username@website's name</p>
-              </div>
-
+        <div class="container">
+          <div class="row">
+            <div class="column-66">
+              <img src="middle 6.png" alt="Additional LVM partitions">
             </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="column-66">
-                <img src="sftp final 3.png">
-              </div>
-              <div class="column-33">
-                <p> after you have entered the command it will ask you for a password to the website you are trying to
-                  enter.
-                  after succesfully entering you will have two sides you are on. one being your local computer and then
-                  the
-                  website that your are connected to. if you want to work on your local computer put a l before any
-                  commands you
-                  put in. as for the website you may use the the normal commands to work with what you have. </p>
-              </div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="column-66">
-                <img src="sftp final 4.png">
-              </div>
-              <div class="column-33">
-                <p> as for this picture you see that what happends when you want to upload
-                  something and downloading will be
-                  very similar to what you see here.</p>
-              </div>
+            <div class="column-33">
+              <p>
+                As I continued, I realized I needed more groups of storage, so I created a few more LVM partitions.
+              </p>
             </div>
           </div>
         </div>
-        <button id="sftp_connection_btn">coding</button>
 
-
-
-
-      </div>
-    </div>
-    <div id="linux_projects_center_btn"><button id="linux_projects_btn">show more</button></div>
-
-
-    <div class="Python">
-      <h2 id="Python"><u><b>Python</u></b></h2>
-      <p>Python was the last language i learned mainly becuase i wanted to know if just
-        how different it was to the other languages i learned.
-      </p>
-      <h3>Password generator</h3>
-      <p>this project that i made is that it randomly pick letter or number from the string
-        i gave it and put that into a text document for me to view at a later date.</p>
-      <div id="Password">
-        <pre>
-
-                                #creates a random passsword
-                                import random 
-                                import datetime
-                                import linecache
-              
-              
-              
-                                date =  (datetime.datetime.now())
-                                chars = "abcdefghijklomnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789!@#$%^&*()"
-                                path = r'your path to file'
-              
-                                def listtostr(text):
-                                    # initialize an empty string
-                                    str1 = "" 
-                                    
-                                    # return string  
-                                    return (str1.join(text)) 
-              
-                                # this function read the file 
-                                def ReadTheFile(website):
-                                    f = open(path,'r')
-                                    text = f.readlines()
-                                    #this reads each line in the text looking the word the user put in
-                                    for line in text:
-                                        if website in line:
-                                            position = text.index(line)
-                                            specific_line = linecache.getline(path,position + 1)
-                                            f.close
-                                            ask_user(password,date,specific_line,position,text) #if found moves to the ask_user function
-                                            break
-                                    else: # if not there closes read function and moves to write funtion
-                                            f.close
-                                            a = open(path,'a')
-                                            a.write("\n"+ website +": " + password + "; " + date.strftime("%x"))
-                                #ask user if they want to overwrite the password the read function found
-                                def ask_user(password,date,specific_line,position,text):
-                                    check = str(input("would you like to overwrite it? (Y/N): ")).lower().strip()
-                                    try:
-                                        if check[0] == 'y':# if yes moves to Write funtion
-                                            WriteToFile(password,date,specific_line,position,text)
-                                        elif check[0] == 'n':
-                                            print("cancelled")
-                                        else: # if no cancels program
-                                            print('Invalid Input')
-                                            return ask_user()
-                                    except Exception as error:# makes sure the user picks yes or no and not just random junk
-                                        print("Please enter valid inputs")
-                                        print(error)
-                                #this function write in the word that the user inputed
-                                def WriteToFile(password,date,specific_line,position,text):
-                                    with open(path,"w") as w:
-                                        line_list = specific_line.split()#get line from read function and take apart to either replace or write to new line
-                                        line_list[1]= " "+  password +"; "
-                                        line_list[2] = date.strftime("%x")
-                                        str1 = listtostr(line_list)
-                                        text[position] = str1 +"\n"
-                                        for ele in text:
-                                            w.write(ele)
-                                        w.close
-                                while 1:# this shows up first to get user input for what the needs
-                                    website = input("what is the name of the website? ")
-                                    password_len = int(input("how long of a password do you need? "))
-                                    for x in range(0,1):#gives the amount of char the user ask for in prev question
-                                        password = ""
-                                        for x in range(0, password_len):
-                                            password_char = random.choice(chars)
-                                            password = password + password_char
-                                    break
-              
-                                ReadTheFile(website)
-                          </pre>
-      </div>
-      <button id="Password_btn">coding</button>
-
-      <div id="Python_projects">
-
-
-        <h3>search program</h3>
-        <p>this project that i made is that it randomly pick letter or number from the string
-          i gave it and put that into a text document for me to view at a later date.</p>
-        <div id="search">
-          <pre>
-                  import os
-                  import win32api
-                  import fnmatch
-                  import re
-        
-                  class creation:
-        
-                      def search_contents(drive,search_term): #searches through the drive looking for the file 
-                          for dir,sub, files in os.walk(drive,topdown=True):    
-                              for file in files:
-                                  if  fnmatch.fnmatch(file,search_term) == True:
-                                      print("\tFound the file!: ", file)
-                                      file_location = os.path.abspath(os.path.join(dir, file))
-                                      print(file_location)
-                                      break
-                              else:
-                                  continue
-        
-                      def find_file_in_all_drives(search_term):
-                          #get the begining file to start search
-                          rex = re.compile(search_term) 
-                          for drive in win32api.GetLogicalDriveStrings().split('\000')[:-1]:
-                              creation.search_contents(drive,search_term)
-        
-                      def get_nameoffile(): #get the name and exstention of file
-                          key_word = input("what are you looking for? ")
-                          dot_exstention= input("what is the exstention? ")
-                          search_term = key_word + "." + dot_exstention
-                          creation.find_file_in_all_drives(search_term)
-                          
-        
-                  #sends to the start of the program 
-                  creation.get_nameoffile()
-        
-                      </pre>
+        <div class="container">
+          <div class="row">
+            <div class="column-66">
+              <img src="middle 7.png" alt="Creating volume group">
+            </div>
+            <div class="column-33">
+              <p>
+                Since I had multiple LVM partitions, I grouped them using a volume group (VG). I named it
+                <code>LVMVolGroup</code>.
+              </p>
+            </div>
+          </div>
         </div>
-        <button id="search_btn">coding</button>
 
-        <h3>security program</h3>
-        <p>this project that i made is that it randomly pick letter or number from the string
-          i gave it and put that into a text document for me to view at a later date.</p>
-        <div id="security">
-          <pre>
-                    import os
-                    import win32api
-                    import fnmatch
-                    import re
-                    import encrypt_data
-                    import decrypt_data
-                    import create_keys
-                    class creation:
-                        def what_to_do(file_location,search_term): #sets up a menu for what they want to do with the file
-                            print("[1]encrypt the file")
-                            print("[2]decrypt the file")
-                            print("[3]add to encrypted file")
-                            
-                            check = int(input("what would you like to do? "))
-                            if check == 1:
-                                create_keys.key_gen.create_keys(search_term)
-                                encrypt_data.encryption.encrypt_file(file_location,search_term)
-                            elif check == 2:
-                                decrypt_data.decrypt.decrypt_file(search_term)
-                            elif check == 3:
-                                decrypt_data.decrypt.decrypt_file_add(search_term)
-              
-                        def search_contents(drive,search_term): #searches through the drive looking for the file 
-                            for dir,sub, files in os.walk(drive,topdown=True):    
-                                for file in files:
-                                    if  fnmatch.fnmatch(file,search_term) == True:
-                                        print("\tFound the file!: ", file)
-                                        file_location = os.path.abspath(os.path.join(dir, file))
-                                        creation.what_to_do(file_location,search_term)
-                                        break
-                                else:
-                                    continue
-              
-                        def find_file_in_all_drives(search_term):
-                            #get the begining file to start search
-                            rex = re.compile(search_term) 
-                            for drive in win32api.GetLogicalDriveStrings().split('\000')[:-1]:
-                                creation.search_contents(drive,search_term)
-              
-                        def get_nameoffile(): #get the name and exstention of file
-                            key_word = input("what are you looking for? ")
-                            dot_exstention= input("what is the exstention? ")
-                            search_term = key_word + "." + dot_exstention
-                            creation.find_file_in_all_drives(search_term)
-                            
-              
-                    #sends to the start of the program 
-                    creation.get_nameoffile()
-              
-              
-                  import os
-                  import shutil
-                  
-                  pos1= os.listdir()
-                  pos2="D:\code projects\secret stuff"
-                  
-                  def move_stuff(search_term):
-                      for file in pos1:
-                          if file == search_term + 'encrypted_key':
-                              new1 = os.path.abspath(file)
-                              shutil.move(new1,pos2)
-                              print("moved file")
-                          elif file == search_term + 'priv.key':
-                              new1 = os.path.abspath(file)
-                              shutil.move(new1,pos2)
-                              print("moved file")
-                          elif file == search_term + 'encrypted_file':
-                              new1 = os.path.abspath(file)
-                              shutil.move(new1,pos2)
-                              print("moved file")
-                          elif file == search_term + 'symmetric.key':
-                              new1 = os.path.abspath(file)
-                              shutil.move(new1,pos2)
-                              print("moved file")
-                          elif file == search_term +'public.key':
-                              new1 = os.path.abspath(file)
-                              shutil.move(new1,pos2)
-                              print("moved file")
-                          elif file == search_term:
-                              new1 = os.path.abspath(file)
-                              shutil.move(new1,pos2)
-                              print("moved file")
-                          else:
-                              print("not that one")                      
-              
-                  import os
-                  import move_stuff
-                  import rsa
-                  from cryptography.fernet import Fernet
-                  
-                  class encryption:
-                      def encrypt_file(file_location,search_term,):
-                          # open the symmetric key file
-                          
-                          skey = open(search_term + 'symmetric.key','rb')
-                          key = skey.read()
-                  
-                          # create the cipher
-                          cipher = Fernet(key)
-                  
-                          # open file for encrypting
-                          myfile = open(file_location,'rb')
-                          myfiledata= myfile.read()
-                  
-                          # encrypt the data
-                          encrypted_data = cipher.encrypt(myfiledata)
-                          edata = open(search_term +'encrypted_file','wb')
-                          edata.write(encrypted_data)
-                  
-                          print('encrypting')
-                  
-                          # open the public key file
-                          pkey = open(search_term +'public.key','rb')
-                          pkdata = pkey.read()
-                  
-                          # load the file
-                          pubkey = rsa.PublicKey.load_pkcs1(pkdata)
-                  
-                          # encrypt the symmetric key file with the public key
-                          encrypted_key = rsa.encrypt(key,pubkey)
-                  
-                          ekey = open(search_term +'encrypted_key','wb')
-                          ekey.write(encrypted_key)
-                  
-                  
-                          skey.close()
-                          myfile.close()
-                          edata.close()
-                          ekey.close()
-                  
-                          move_stuff.move_stuff(search_term)
-                          
-                      def encrypt_file_add(search_term,encrypted_data_add):
-                          # open the symmetric key file
-                          
-                          skey = open(search_term + 'symmetric.key','rb')
-                          key = skey.read()
-                  
-                          # create the cipher
-                          cipher = Fernet(key)
-                  
-                          # open file for encrypting
-                          myfile = open(search_term + 'encrypted_file','rb')
-                          myfiledata= myfile.read()
-                  
-                          # encrypt the data
-                          encrypted_data = cipher.encrypt(myfiledata)
-                          edata = open(search_term +'encrypted_file','wb')
-                          edata.write(encrypted_data)
-                  
-                          print('encrypting')
-                  
-                          # open the public key file
-                          pkey = open(search_term +'public.key','rb')
-                          pkdata = pkey.read()
-                  
-                          # load the file
-                          pubkey = rsa.PublicKey.load_pkcs1(pkdata)
-                  
-                          # encrypt the symmetric key file with the public key
-                          encrypted_key = rsa.encrypt(key,pubkey)
-                  
-                          ekey = open(search_term +'encrypted_key','wb')
-                          ekey.write(encrypted_key)
-                  
-                  
-                          skey.close()
-                          myfile.close()
-                          edata.close()
-                          ekey.close()
-              
-              
-                    import rsa
-                    import os
-                    import PasswordGenerator
-                    import encrypt_data
-                    from cryptography.fernet import Fernet
-                    
-                    class decrypt:
-                        def decrypt_file(search_term):
-                            os.chdir("D:\code projects\secret stuff")
-                            # load the private key to decrypt the public key
-                            prkey = open(search_term + 'priv.key','rb')
-                            pkey = prkey.read()
-                            private_key = rsa.PrivateKey.load_pkcs1(pkey)
-                    
-                            e = open(search_term + 'encrypted_key','rb')
-                            ekey = e.read()
-                    
-                            dpubkey = rsa.decrypt(ekey,private_key)
-                    
-                            cipher = Fernet(dpubkey)
-                    
-                            encrypted_data = open(search_term + 'encrypted_file','rb')
-                            edata = encrypted_data.read()
-                    
-                    
-                            decrypted_data = cipher.decrypt(edata)
-                    
-                    
-                            decryption = open(search_term + 'decrypted_file', 'w')
-                            decryption.write(decrypted_data)
-                            
-                            prkey.close()
-                            encrypted_data.close()
-                            e.close()
-                    
-                    
-                        def decrypt_file_add(search_term):
-                            os.chdir("D:\code projects\secret stuff")
-                            # load the private key to decrypt the public key
-                            prkey = open(search_term + 'priv.key','rb')
-                            pkey = prkey.read()
-                            private_key = rsa.PrivateKey.load_pkcs1(pkey)
-                    
-                            e = open(search_term + 'encrypted_key','rb')
-                            ekey = e.read()
-                    
-                            dpubkey = rsa.decrypt(ekey,private_key)
-                    
-                            cipher = Fernet(dpubkey)
-                    
-                            encrypted_data = open(search_term + 'encrypted_file','rb')
-                            edata = encrypted_data.read()
-                            decrypted_data = cipher.decrypt(edata)
-                            print(decrypted_data)
-                            encrypted_data.close()
-                    
-                            
-                            website,password,date = PasswordGenerator.start()
-                            add_data =decrypted_data + website + password+date
-                            encrypted_data_add = open(search_term + 'encrypted_file','wb')
-                            encrypted_data_add.write(add_data)
-                    
-                            prkey.close()
-                            encrypted_data_add.close()
-                            e.close()
-                    
-                            encrypt_data.encryption.encrypt_file_add(search_term,encrypted_data_add)
-                                                          
-              
-                import rsa
-                from cryptography.fernet import Fernet
-                class key_gen:
-                    def create_keys(search_term):
-                        # create the symmetric key
-                        key = Fernet.generate_key()
-                
-                        # write the symmetric key to a file
-                        k = open(search_term + 'symmetric.key','wb')
-                        k.write(key)
-                        k.close()
-                
-                        # create the pub & private keys
-                        (pubkey,privkey)=rsa.newkeys(2048)
-                
-                        # write the public key to a file
-                        pukey = open(search_term + 'public.key','wb')
-                        pukey.write(pubkey.save_pkcs1('PEM'))
-                        pukey.close()
-                
-                        # write the private key to a file
-                        prkey = open(search_term + 'priv.key','wb')
-                        prkey.write(privkey.save_pkcs1('PEM'))
-                        prkey.close()
-                
-                        
-                
-              
-              </pre>
+        <div class="container">
+          <div class="row">
+            <div class="column-66">
+              <img src="middle 8.png" alt="Volume group summary">
+            </div>
+            <div class="column-33">
+              <p>
+                After creating the volume group, all the LVM partitions appeared under that group, making it easier to
+                manage them together.
+              </p>
+            </div>
+          </div>
         </div>
-        <button id="security_btn">coding</button>
-      </div>
-    </div>
-    <div class="center">
-      <div id="Python_projects_center_btn">
-        <button id="Python_projects_btn">show more</button>
-      </div>
-</body>
-<footer>
-  <div class="contact">
-    <button style="font-size:24px"><a href="https://www.linkedin.com/in/christian-dover/"><i
-          class="fa fa-linkedin-square"></a></i></button>
-    <button style="font-size:24px"><a href="https://github.com/christian-dover"><i
-          class="fa fa-github-square"></i></a></i></button>
-  </div>
-</footer>
 
-</html>
+        <div class="container">
+          <div class="row">
+            <div class="column-66">
+              <img src="middle 9.png" alt="Logical volume creation">
+            </div>
+            <div class="column-33">
+              <p>
+                With the group set up, I created logical volumes for specific purposes: <code>www</code>,
+                <code>projects</code>, and <code>db</code>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="column-66">
+              <img src="middle 12.png" alt="Directories for mount points">
+            </div>
+            <div class="column-33">
+              <p>
+                Next, I created directories with the same names (<code>www</code>, <code>projects</code>, and
+                <code>db</code>) so I could mount the logical volumes there.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class=
